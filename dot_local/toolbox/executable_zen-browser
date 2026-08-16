@@ -1,0 +1,9 @@
+#!/bin/sh
+	if [ -f /run/.containerenv ]; then
+                    exec flatpak-spawn --host toolbox run -c "arch" /usr/sbin/zen-browser "$@"
+                elif [ -z "$container" ] ; then
+                    exec /usr/bin/toolbox run -c arch zen-browser "$@"
+                else
+                    exec host-spawn toolbox run -c arch /usr/sbin/zen-browser "$@"
+                fi
+            
