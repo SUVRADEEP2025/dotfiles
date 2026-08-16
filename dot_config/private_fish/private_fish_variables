@@ -1,4 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR SSH_AUTH_SOCK:/run/user/1000/ssh\x2dagent\x2esocket\x1e/var/home/suradeep/\x2evar/app/com\x2ebitwarden\x2edesktop/data/\x2ebitwarden\x2dssh\x2dagent\x2esock
 SETUVAR __fish_initialized:4300
 SETUVAR fish_user_paths:/var/home/suradeep/\x2elocal/bin
