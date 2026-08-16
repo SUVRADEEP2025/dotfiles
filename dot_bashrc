@@ -23,6 +23,10 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+eval "$(starship init bash)"
 export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+eval "$(/var/home/suradeep/.local/bin/mise activate bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init bash)"
