@@ -1,9 +1,9 @@
 #!/bin/sh
 	if [ -f /run/.containerenv ]; then
-                    exec flatpak-spawn --host toolbox run -c "arch" /usr/sbin/firefox "$@"
+  exec flatpak-spawn --host toolbox run -c "arch" /usr/sbin/firefox "$@"
                 elif [ -z "$container" ] ; then
-                    exec /usr/bin/toolbox run -c arch firefox "$@"
+                    exec /usr/bin/toolbox run -c arch /usr/sbin/firefox "$@"
                 else
-                    exec host-spawn toolbox run -c arch /usr/sbin/firefox "$@"
+                    exec podman exec -d arch /usr/sbin/firefox "$@"
                 fi
             
